@@ -1,0 +1,107 @@
+:root {
+  /* ### Primary */
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+
+  /* ### Neutral */
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: var(--Light-Gray);
+}
+
+main {
+  border-radius: 7px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 540px;
+  overflow: hidden;
+}
+
+main .join {
+  padding: 20px;
+}
+
+main .join h1 {
+  font-size: 22px;
+  color: var(--Cyan);
+}
+
+main .join h4 {
+  margin: 10px 0;
+  color: var(--Bright-Yellow);
+}
+
+main .join p {
+  color: var(--Grayish-Blue);
+}
+
+main .bottom {
+  display: flex;
+}
+
+main .bottom div {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 50%;
+  padding: 20px;
+  gap: 20px;
+}
+
+main .why {
+  gap: 5px !important;
+  background: hsl(179deg 62% 43% / 74%);
+}
+
+main .why P:not(:first-child) {
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+main .sub {
+  background-color: var(--Cyan);
+  gap: 20px !important;
+}
+
+main .sub span {
+  font-size: 14px;
+  color: var(--Light-Gray);
+  font-weight: 400;
+}
+
+main .sub p:nth-child(3) {
+  font-size: 14px;
+  color: var(--Light-Gray);
+}
+
+main .sub p:nth-child(4) {
+  text-align: center;
+  background-color: var(--Bright-Yellow);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+@media (max-width: 767px) {
+  main {
+    width: 250px;
+  }
+  .bottom {
+    flex-direction: column;
+  }
+  .bottom div {
+    width: 100% !important;
+  }
+}
